@@ -1,0 +1,170 @@
+/*Common Style*/
+/*General Style*/
+
+/* Sections Style
+1- header section
+2- home style
+3- about style
+4-profolio style
+5- services style
+6- price style
+7- team style
+8-blog style 
+
+*/
+
+
+/*general style*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+a{
+text-decoration: none;
+}
+h1,h2,h3,h4,h5,h6{
+     font-family: 'Montserrat', sans-serif;
+}
+.overlay{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.clear{
+    clear: both;
+}
+
+/* header section*/
+.header{
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    /*overflow: hidden;*/
+}
+.header-content  .logo{
+    width: 40%;
+    float: left;
+}
+.header-content  .nav{
+    width: 60%;
+    float: left;
+     text-align: right;
+    list-style: none;
+}
+.header-content .logo img{
+    width: 20%;
+    margin-top: 10px;
+
+}
+
+.header-content .nav > li{
+      display: inline-block;
+}
+.header-content .nav > li > a{
+    display: block;
+    color: #fff;
+    padding: 30px 15px;
+    font-size: 15px;
+}
+.header-content .nav > li > a::after,
+.header-content .nav > li > a.active::after{
+    content: '';
+    background-color: #6195ff;
+    height: 3px;
+    display: block;
+    margin-top:2px;
+    transition: width 0.5s;
+}
+.header-content .nav > li > a::after{
+    width: 0;
+}
+.header-content .nav > li > a.active::after{
+    width: 100%;
+}
+.header-content .nav > li > a:hover::after{
+width: 100%;
+}
+.home{
+    background-image: url(../images/background/background1.webp);
+    height: 100vh;
+    background-size: cover;
+    position: relative;
+}
+.home-content{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 65%;
+    text-align: center;
+}
+
+.home-content .title{
+    font-size: 3.5rem;
+    color: #fff;
+    text-transform: uppercase;
+
+}
+.home-content .description{
+    color: #fff;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    padding: 30px 0;
+}
+.home-content .btn{
+    width: 160px;
+    padding :20px 0;
+    border-radius: 5px;
+    border: 0;
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: opacity 0.5s;
+}
+.home-content .btn:hover{
+opacity: 0.6;
+}
+.home-content .btn-start{
+    background-color: #fff;
+    margin-right: 10px;
+}
+.home-content .btn-learn{
+    color: #fff;
+    background-color: #6195ff;
+}
+.dropdown{
+    position: relative;
+}
+.dropdown-menu{
+    position: absolute;
+    top: 75%;
+    left: -50%;
+    width: 160px;
+    background-color: #6195ff;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+.dropdown:hover .dropdown-menu{
+     visibility: visible;
+    opacity: 1;
+}
+.dropdown-menu a{
+    display: block;
+    padding: 10px;
+    color: #fff;
+}
+
+
+
